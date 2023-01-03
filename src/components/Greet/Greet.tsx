@@ -1,7 +1,8 @@
-type GreeProps = {
-    name?: string;
-};
+import { GreetProps } from './Gree.types';
 
-export default function Greet({ name }: GreeProps) {
-    return <div>Hello {name}</div>;
+export default function Greet({ name }: GreetProps) {
+    if (name) {
+        return <div>Hello {name}</div>;
+    }
+    return <div>Hello </div>;
 }
